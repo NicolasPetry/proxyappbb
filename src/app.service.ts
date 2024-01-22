@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import * as PDFDocument from 'pdfkit'
 import { ScryfallApi } from './scryfall/scryfallApi';
 import * as path from 'path'
 import { Pdfservice } from './pdfService/pdfservice';

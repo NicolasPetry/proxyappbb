@@ -11,8 +11,15 @@ export class Pdfservice {
           })
     
           // customize your PDF document
-          const setWidth = 189.9;
-          const setHeight = 264.5;
+          const widthInInches = 2.5;
+          const lengthInches = 3.5;
+          const oneInchIs72Points = 72;
+
+          const setWidth = widthInInches * oneInchIs72Points;
+          const setHeight = lengthInches * oneInchIs72Points;
+
+          console.log(setWidth);
+          console.log(setHeight)
           const gutter = 5
           let x = gutter;
           let x1 = x + setWidth + gutter;
@@ -49,5 +56,15 @@ export class Pdfservice {
         })
     
         return pdfBuffer
+      }
+
+      pointsToInch() {
+
+        const widthInInches = 2.5;
+        const lengthInches = 3.5;
+
+        let wP = widthInInches * 72;
+        let lP = lengthInches * 72;
+
       }
 }

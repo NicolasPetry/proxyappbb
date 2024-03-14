@@ -5,6 +5,6 @@ export class SaveImgDto {
     @IsNotEmpty()
     imageScryFallUrl: string;
     @IsNotEmpty()
-    fileName: string;
+    illustration_id: string;
     
 }

@@ -26,7 +26,9 @@ export class AppController {
   @UsePipes(new ValidationPipe({transform: true}))
   async createImage(@Res() res: Response, @Body() saveImgDto: SaveImgDto)
   {
-    await this.appService.createAndSaveImage(saveImgDto.imageScryFallUrl, saveImgDto.illustration_id)
+    const filePath = await this.appService.createAndSaveImage(saveImgDto.imageScryFallUrl, saveImgDto.illustration_id)
+
+    return filePath;
   }
 
   @Post('/getPdfList')
